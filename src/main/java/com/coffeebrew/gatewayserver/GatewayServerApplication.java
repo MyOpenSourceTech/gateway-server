@@ -5,10 +5,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.context.annotation.ComponentScan;
 
 @EnableZuulProxy
 @EnableDiscoveryClient
 @EnableFeignClients("com.coffeebrew.gatewayserver")
+@ComponentScan("com.coffeebrew.gatewayserver")
 @SpringBootApplication
 public class GatewayServerApplication {
 
